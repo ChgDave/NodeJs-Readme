@@ -2,6 +2,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const markdown = require("./utils/generateMarkdown.js");
+console.log(markdown);
+// console.log(markdown);
 
 // TODO: Create an array of questions for user input
 
@@ -19,8 +21,8 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFile("./README.md", data, (err, data) =>
+function writeToFile(data) {
+  fs.writeFile(`./README.md`, data, (err, data) =>
     err
       ? console.error(err)
       : console.log("Successfully created a README file!")
@@ -35,27 +37,27 @@ function init() {
       {
         type: "input",
         message: questions[0],
-        name: githubUserName,
+        name: "githubUserName",
       },
       {
         type: "input",
         message: questions[1],
-        name: email,
+        name: "email",
       },
       {
         type: "input",
         message: questions[2],
-        name: projectName,
+        name: "projectName",
       },
       {
         type: "input",
         message: questions[3],
-        name: description,
+        name: "description",
       },
       {
         type: "checkbox",
         message: questions[4],
-        name: license,
+        name: "license",
         choices: [
           "The MIT License",
           "Apache 2.0 License",
@@ -66,26 +68,30 @@ function init() {
       {
         type: "input",
         message: questions[5],
-        name: installCommand,
+        name: "installCommand",
       },
       {
         type: "input",
         message: questions[6],
-        name: testCommand,
+        name: "testCommand",
       },
       {
         type: "input",
         message: questions[7],
-        name: runRepo,
+        name: "runRepo",
       },
       {
         type: "input",
         message: questions[8],
-        name: contributeRepo,
+        name: "contributeRepo",
       },
     ])
-    .then((data) => {});
-  // Use the writeToFile function to write the data to README
+    .then((data) => {
+      //call the generateMarkdown function to generate the data content to put into the writeToFile function
+      const readmeContent = markdown(data);
+      // Use the writeToFile function to write the data to README
+      writeToFile(readmeContent);
+    });
 }
 
 // Function call to initialize app
