@@ -58,9 +58,10 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.projectName}
+  const tripleTick = "```";
+  const readmeContent = `# ${data.projectName}
 
-license section
+  ${renderLicenseSection(`${data.license}`)}
 
 ## Description
 
@@ -84,7 +85,9 @@ ${data.description}
 
 To install necessary dependencies, run the following command:
 
+${tripleTick}
 ${data.installCommand}
+${tripleTick}
 
 ## Usage
 
@@ -102,12 +105,19 @@ ${data.contributeRepo}
 
 To run tests, run the following commmand:
 
+${tripleTick}
 ${data.runRepo}
+${tripleTick}
 
 ## Questions
 
-If you have any qustions about the repo, open an issue or contact me directly at ${data.email}. You can also find more of my work at [${data.githubUserName}](https://github.com/${data.githubUserName})
+If you have any qustions about the repo, open an issue or contact me directly at ${
+    data.email
+  }. You can also find more of my work at [${
+    data.githubUserName
+  }](https://github.com/${data.githubUserName}).
 `;
+  return readmeContent;
 }
 
 module.exports = generateMarkdown;

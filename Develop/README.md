@@ -1,10 +1,10 @@
-# homework
+# nodejs
 
-license section
+  [![Apache 2.0 License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Description
 
-homework
+nodejs readme generator
 
 ## Table of Contents
 
@@ -24,15 +24,17 @@ homework
 
 To install necessary dependencies, run the following command:
 
-npm install
+```
+npm i
+```
 
 ## Usage
 
-just use it
+run it
 
 ## License
 
-This project is licensed under The MIT License
+This project is licensed under Apache 2.0 License
 
 ## Contributing
 
@@ -42,8 +44,10 @@ add your code
 
 To run tests, run the following commmand:
 
-just use it
+```
+run it
+```
 
 ## Questions
 
-If you have any qustions about the repo, open an issue or contact me directly at chgdave@gmail.com. You can also find more of my work at [chgdave](https://github.com/chgdave)
+If you have any qustions about the repo, open an issue or contact me directly at chgdave@gmail.com. You can also find more of my work at [chgdave](https://github.com/chgdave).

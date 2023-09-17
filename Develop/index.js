@@ -1,9 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const markdown = require("./utils/generateMarkdown.js");
-console.log(markdown);
-// console.log(markdown);
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 // TODO: Create an array of questions for user input
 
@@ -12,7 +10,7 @@ const questions = [
   "What is your Github username?",
   "What is your email address?",
   "What is your project name?",
-  "Give us a short description of your project",
+  "Give us a short description of your project:",
   "What is the license for this project?",
   "What npm command was used to install dependencies?",
   "What npm command was used to run npm tests?",
@@ -55,7 +53,7 @@ function init() {
         name: "description",
       },
       {
-        type: "checkbox",
+        type: "list",
         message: questions[4],
         name: "license",
         choices: [
@@ -64,16 +62,19 @@ function init() {
           "Eclipse Public License 1.0",
           "Mozilla Public License 2.0",
         ],
+        default: 1,
       },
       {
         type: "input",
         message: questions[5],
         name: "installCommand",
+        default: "npm i",
       },
       {
         type: "input",
         message: questions[6],
         name: "testCommand",
+        default: "npm test",
       },
       {
         type: "input",
@@ -88,7 +89,7 @@ function init() {
     ])
     .then((data) => {
       //call the generateMarkdown function to generate the data content to put into the writeToFile function
-      const readmeContent = markdown(data);
+      const readmeContent = generateMarkdown(data);
       // Use the writeToFile function to write the data to README
       writeToFile(readmeContent);
     });
