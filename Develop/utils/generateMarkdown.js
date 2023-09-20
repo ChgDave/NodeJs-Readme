@@ -106,7 +106,7 @@ ${data.contributeRepo}
 To run tests, run the following commmand:
 
 ${tripleTick}
-${data.runRepo}
+${data.testCommand}
 ${tripleTick}
 
 ## Questions

@@ -77,6 +77,8 @@ https://github.com/ChgDave/NodeJs-Readme
 
 ## Video Link
 
+https://drive.google.com/file/d/14WjU1JOTkoh7bqzKL_GHPUUokd7qRE03/view
+
 ## Questions
 
 If you have any qustions about the repo, open an issue or contact me directly at chgdave@gmail.com. You can also find more of my work at [chgdave](https://github.com/chgdave).
