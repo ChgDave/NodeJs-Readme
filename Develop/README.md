@@ -1,10 +1,10 @@
-# Node.js README Generator
+# node
 
-  [![The MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![Apache 2.0 License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Description
 
-The user can generate a README file using Node.js by answering questions in the command line.
+nodejs readme
 
 ## Table of Contents
 
@@ -30,15 +30,15 @@ npm i
 
 ## Usage
 
-The user need to make sure they install the npm dependencies.
+run
 
 ## License
 
-This project is licensed under The MIT License
+This project is licensed under Apache 2.0 License
 
 ## Contributing
 
-The user need to start adding their own code.
+add
 
 ## Tests
 
@@ -50,4 +50,4 @@ npm test
 
 ## Questions
 
-If you have any qustions about the repo, open an issue or contact me directly at chgdave@gmail.com. You can also find more of my work at [ChgDave](https://github.com/ChgDave).
+If you have any qustions about the repo, open an issue or contact me directly at chgdave@mst.edu. You can also find more of my work at [chgdave](https://github.com/chgdave).
